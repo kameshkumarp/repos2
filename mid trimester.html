@@ -1,0 +1,93 @@
+<html>
+<body>
+<form>
+<h3>Name</h3><br>
+<input type="text" id="name" placeholder="Enter the Name"><br>
+<input type="text" id="emp" placeholder="Enter the Employee ID" ><br>
+<input type="radio" id="ind" name="indgames" value="Indoor" onclick="ass()" >INDOOR &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<select name="indgames" id="in" disabled >
+<option value=""></option>
+<option value="table">Table Tennis</option>
+<option value="carrom">Carrom</option>
+<option value="chess">Chess</option></select>
+<input type="button" id="reg"value="Register" onclick="r()" disabled><br>
+<input type="radio" id="out" name="indgames" value="Outdoor" onclick="as()">OUTDOOR &nbsp &nbsp &nbsp &nbsp
+<select name="indgames" id="outd" disabled>
+<option value=""></option>
+<option value="cricket">Cricket</option>
+<option value="bad">Badminton</option>
+<option value="volley">VolleyBall</option></select>
+<input type="button" id="reg1" value="Register" onclick="r1()" disabled>
+</form>
+<script>
+function ass()
+{
+  
+  var ic=document.getElementById("in");
+  var r=document.getElementById("reg");
+  var rdx=document.getElementById("reg1");
+  var m=document.getElementById("outd");
+  ic.disabled=false;
+  r.disabled=false;
+  rdx.disabled=true;
+  m.disabled=true;
+}
+function as()
+{
+  var i=document.getElementById("outd");
+  var rdx=document.getElementById("reg1");
+  var ic=document.getElementById("in");
+  var r=document.getElementById("reg");
+  i.disabled=false;
+  rdx.disabled=false;
+  ic.disabled=true;
+  r.disabled=true;
+  
+}
+
+var count=0;
+function r()
+{
+ var ic=document.getElementById("in");
+ var re=document.getElementById("reg1");
+ var re1=document.getElementById("reg");
+ var i=document.getElementById("out");
+     count=count+1
+	 if(count==2)
+     {
+	 
+	  alert("you have selected  for 2 indoor activity please select in an outdoor or indoor")
+	   
+     }
+	
+   
+     if(count==3)
+     {	 
+     alert("you have registered three events successfully")
+	 }
+    	 
+}
+
+var count=0;
+function r1()
+{
+	var ic=document.getElementById("in");
+	 var re=document.getElementById("reg1");
+	 var re1=document.getElementById("reg");
+	 var i=document.getElementById("out");
+	 count=count+1
+     if(count==2)
+     {
+	  alert("you have selected  for 2 outdoor activity please select in an outdoor or indoor")
+	 }	
+	
+		 if(count==3)
+		 {
+		  re=alert("you have registered three events successfully")
+		 } 	 
+     	 
+}
+
+</script>
+</body>
+</html>  
